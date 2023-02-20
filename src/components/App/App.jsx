@@ -29,12 +29,12 @@ export const App = () => {
         .then(({ hits, totalHits }) => {
           if (hits.length === 0) {
             return Notify.warning(
-              'Результат поиска зависит от качества запроса. Давайте попробуем еще раз :)'
+              'The search result depends on the quality of the query. Let`s try again :)'
             );
           }
 
           if (totalHits === 0) {
-            return Notify.info('Пока-что это всё, что удалось найти...');
+            return Notify.info('So far, that`s all I`ve been able to find...');
           }
 
           const newImages = hits.map(({ id, webformatURL, largeImageURL }) => {
